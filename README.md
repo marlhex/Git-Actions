@@ -10,7 +10,7 @@ type a)
     step 3
 
 
-  Type b): jobs running sequentially, which listens by every push
+  Type b) jobs running sequentially, which listens by every push
     Job lint
       step 1
 
