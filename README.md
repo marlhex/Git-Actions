@@ -1,8 +1,8 @@
-React + Github actions
+# React + Github actions
 
-It has 3 different workflows
+## It has 3 different workflows
 
-type a) 
+### type a) 
 
   job
     step 1
@@ -10,7 +10,7 @@ type a)
     step 3
 
 
-  Type b) jobs running sequentially, which listens by every push
+  ### Type b) jobs running sequentially, which listens by every push
     Job lint
       step 1
 
@@ -20,5 +20,5 @@ type a)
     Job deploy
       Step
 
-  type C) 
+  ### type C) 
     another workflow to listen for new issues
