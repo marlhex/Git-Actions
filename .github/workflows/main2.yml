@@ -12,6 +12,7 @@ jobs:
         run: npm run lint
 
   testing:
+    needs: linting
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -23,6 +24,7 @@ jobs:
      
 
   deploying:
+    needs: testing
     runs-on: ubuntu-latest
     steps:
       - name: checkout
