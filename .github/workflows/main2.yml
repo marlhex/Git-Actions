@@ -1,7 +1,7 @@
 name: second workflow
 on: push
 jobs:
-  first-job: 
+  linting: 
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -11,16 +11,25 @@ jobs:
       - name: Linting
         run: npm run lint
 
-  second-job:
+  testing:
     runs-on: ubuntu-latest
     steps:
+     - name: checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
       - name: Testing code
         run: npm run test
-      - name: Building code
-        run: npm run build
+     
 
-  third-job:
+  deploying:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Building code
+        run: npm run build
       - name: deploying
         run: echo "deploying..."
