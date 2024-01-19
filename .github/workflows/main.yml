@@ -1,0 +1,14 @@
+name: first workflow
+on: push
+jobs:
+  first-job: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linting
+        run: echo "linting..."
+      - name: building
+        run: echo "building..."
+      - name: testing
+        run: echo "testing..."
+      - name: deploying
+        run: echo "deploying..."
