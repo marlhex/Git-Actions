@@ -4,11 +4,15 @@ jobs:
   first-job: 
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
       - name: Linting
-        run: echo "linting..."
-      - name: building
-        run: echo "building..."
-      - name: testing
-        run: echo "testing..."
+        run: npm run lint
+      - name: Testing code
+        run: npm run test
+      - name: Building code
+        run: npm run build
       - name: deploying
         run: echo "deploying..."
